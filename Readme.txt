@@ -1,3 +1,6 @@
+installation via ./install.sh
+
+
 convert MCatNLO output to LHE:
 cmsRun convertMCatNLO2LHE_cfg.py inputFiles=file:MCatNLO_3_4_1/test/Linux/ttb.events outputFile=TT_MCatNLO_test.lhe mcatnloInputsFile=MCatNLO_3_4_1/test/MCatNLO.inputs
 
