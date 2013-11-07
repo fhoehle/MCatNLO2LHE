@@ -34,7 +34,8 @@ import FWCore.ParameterSet.Config as cms
 process = cms.Process("MCatNLO2LHE")
 
 process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(-1))
-
+process.load("FWCore.MessageLogger.MessageLogger_cfi")
+process.MessageLogger.cerr.FwkReport.reportEvery = 10000
 process.source = cms.Source("MCatNLOSource",
 	fileNames = cms.untracked.vstring('file:ttb.events'),
          processCode = cms.int32(-11361)
