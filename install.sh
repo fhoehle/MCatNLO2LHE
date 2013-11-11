@@ -15,7 +15,6 @@ patch -p1  < $mcatnlo2lhe/lheWriter.patch
 cd $CMSSW_BASE/src
 scram b -j 4
 cd $CMSSW_BASE
-git@github.com:fhoehle/LHEprocessing.git
 pkgs=(
   "LHEprocessing ./ ./install.sh"
 )
@@ -49,4 +48,5 @@ function installMyGitPackages {
     cd $CMSSW_BASE
   done
 }
+
 installMyGitPackages pkgs
