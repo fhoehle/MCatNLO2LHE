@@ -32,7 +32,8 @@ function getGitPackage {
   fi
 }
 function installMyGitPackages {
-  pkgs=$1[@]
+  name=$1[@]
+  pkgs=("${!name}")
   cd $CMSSW_BASE
   for idx in ${!pkgs[*]}; do
     cd $CMSSW_BASE/`echo ${pkgs[$idx]} | awk '{print $2}'`
