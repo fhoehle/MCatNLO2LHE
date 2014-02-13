@@ -8,8 +8,8 @@ echo "kerberos credentials missing"
 fi
 mcatnlo2lhe=$PWD
 cd $CMSSW_BASE/src  
-addpkg GeneratorInterface/LHEInterface
-addpkg GeneratorInterface/MCatNLOInterface
+git cms-addpkg GeneratorInterface/LHEInterface
+git cms-addpkg GeneratorInterface/MCatNLOInterface
 cd GeneratorInterface/LHEInterface
 patch -p1  < $mcatnlo2lhe/lheWriter.patch
 cd $CMSSW_BASE/src
