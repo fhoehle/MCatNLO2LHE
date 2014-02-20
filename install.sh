@@ -1,11 +1,4 @@
 #!/bin/bash
-klist -s
-rc=$?
-if [[ $rc != 0 ]] ; then
-echo "kerberos credentials missing"
-    klist -c
-    exit $rc
-fi
 mcatnlo2lhe=$PWD
 cd $CMSSW_BASE/src  
 git cms-addpkg GeneratorInterface/LHEInterface
